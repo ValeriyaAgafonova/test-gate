@@ -25,3 +25,8 @@ body{
     text-overflow: ellipsis;
     margin: 5px 0;
 }
+
+.article__dark-theme{
+    background-color: rgb(41, 77, 121);
+    color: white;
+}

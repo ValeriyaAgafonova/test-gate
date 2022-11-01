@@ -19,6 +19,7 @@ function getArticles() {
 function showArticles(articles){
     articlesList = articles
     articlesList.map(item => addNewItem(item))
+    document.querySelectorAll('.article__checkbox').forEach(checkbox=> checkbox.addEventListener('click', changeTheme))
 }
 
 
@@ -32,3 +33,8 @@ function showArticles(articles){
 document.querySelector('body').append(newItem)
   }
 
+
+
+function changeTheme(){
+this.parentNode.classList.toggle('article__dark-theme')
+}
