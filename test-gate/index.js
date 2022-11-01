@@ -1,5 +1,8 @@
 const url = "https://jsonplaceholder.typicode.com/posts/?_start=0&_limit=10";
 let articlesList = [];
+
+// get data from api
+
 function getArticles() {
   fetch(url, {
     method: "GET",
@@ -16,6 +19,8 @@ function getArticles() {
 
 getArticles();
 
+//add items and listeners
+
 function showArticles(articles) {
   articlesList = articles;
   articlesList.map((item) => addNewItem(item));
@@ -30,13 +35,21 @@ function addNewItem(item) {
   newItem.innerHTML = `
     <h2 class="article__name">${item.title}</h2>
     <p class="article__text">${item.body}</p>
-    <input type="checkbox" class="article__checkbox" id="checkbox">`;
+    <input type="checkbox" class="article__checkbox" id="checkbox${item.id}">
+    <label for="checkbox${item.id}"></label>`;
   document.querySelector(".articles").append(newItem);
 }
 
+//change theme
+
 function changeTheme() {
+    console.log(this.parentNode)
   this.parentNode.classList.toggle("article__dark-theme");
 }
+
+
+// Search form
+
 const form = document.querySelector(".form");
 form.addEventListener("submit", getFilterValue);
 let searchValue = "";
@@ -48,6 +61,8 @@ function getFilterValue(e) {
   location.hash = searchValue
   filterArticlesList(searchValue);
 }
+
+// filter articles
 
 function filterArticlesList(value) {
   const articleNames = document.querySelectorAll(".article__name");
