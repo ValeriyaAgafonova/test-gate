@@ -56,11 +56,6 @@ body{
 .article__text{
     margin-bottom: 50px;
 }
-/* .article__checkbox{
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-} */
 
 .article__dark-theme{
     background-color: rgb(41, 77, 121);
