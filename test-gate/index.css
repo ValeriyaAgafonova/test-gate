@@ -2,18 +2,45 @@ body{
     background-color: #ddf6ff;
     padding: 20px;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.form{
+    margin: 20px;
+    width: 80%;
+}
+.form__input{
+    width: calc(100% - 80px);
+    height: 40px;
+    border-radius: 10px;
+    box-shadow: 2px -2px 5px rgb(41, 77, 121), -2px 2px 5px rgb(41, 77, 121);
+}
+.form__button{
+    cursor: pointer;
+    height: 40px;
+    width: 70px;
+    border-radius: 10px;
+    border: 2px solid rgb(41, 77, 121);
+    color:rgb(41, 77, 121);
+}
+.form__button:hover{
+    box-shadow: 2px -2px 5px rgb(41, 77, 121), -2px 2px 5px rgb(41, 77, 121);
+    background-color: rgb(41, 77, 121);
+    color: white;
+}
+.articles{
+    display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
 }
 .article{
     box-sizing: border-box;
-    width: 250px;
-    height: auto;
+    width: 300px;
     border-radius: 10px;
     border: 2px solid rgb(41, 77, 121);
     display: grid;
-    grid-template-rows: 1fr 70% 1fr;
+    grid-template-rows: 20% 65% 15%;
     padding: 20px;
     box-shadow: 5px -5px 10px rgb(41, 77, 121), -5px 5px 10px rgb(41, 77, 121);
     background-color: white;
