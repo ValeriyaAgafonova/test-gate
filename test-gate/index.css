@@ -1,0 +1,27 @@
+body{
+    background-color: #ddf6ff;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.article{
+    box-sizing: border-box;
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid rgb(41, 77, 121);
+    display: grid;
+    grid-template-rows: 1fr 70% 1fr;
+    padding: 20px;
+    box-shadow: 5px -5px 10px rgb(41, 77, 121), -5px 5px 10px rgb(41, 77, 121);
+    background-color: white;
+}
+.article__name{
+    font-size: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 5px 0;
+}
